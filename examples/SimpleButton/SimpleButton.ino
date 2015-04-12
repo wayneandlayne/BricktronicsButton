@@ -29,7 +29,7 @@
 // Select the desired sensor port (SENSOR_1 through SENSOR_4) in the constructors below.
 // Connect pins 2-3 and 4-5 on the chosen sensor port.
 //
-// #include <BricktronicsMegashield.h>
+//#include <BricktronicsMegashield.h>
 //BricktronicsButton b(BricktronicsMegashield::SENSOR_1);
 
 // 3. With a Bricktronics Breakout board - No additional includes needed,
@@ -77,7 +77,7 @@ void loop()
 
   // In order to debounce the button, we transmit a message on the serial
   // port and then wait a little bit longer here.
-  Serial.println("pressed");
+  Serial.println("released");
   delay(100);
 }
 
