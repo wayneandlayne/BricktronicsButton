@@ -6,7 +6,7 @@
 // in response to button presses and releases.
 
 
-// Include the Bricktronics Button librarie
+// Include the Bricktronics Button libraries
 #include <BricktronicsButton.h>
 
 
@@ -14,8 +14,10 @@
 // the code lines corresponding to your chosen method. Comment-out the lines
 // for the other methods that you aren't using.
 
-// 1. With a Bricktronics Shield - Include these lines and be sure to
+// 1. With a Bricktronics Shield - Include these three lines and be sure to
 // call BricktronicsShield::begin() in the setup() function below.
+// You also need to install the Adafruit MCP23017 library:
+//	https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
 // Select the sensor port (SENSOR_1 through SENSOR_4) in the constructors below.
 // If your chosen sensor port has jumpers (ports 3 and 4), connect pins 2-3 and 4-5.
 //
