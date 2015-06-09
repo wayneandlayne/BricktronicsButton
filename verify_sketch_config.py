@@ -8,7 +8,7 @@
 # a Bricktronics Shield, Bricktronics Megashield, and a breakout board.
 # Conceptually, there are multiple config sets numbered 1 - N. Each config set
 # can be one or more blocks within the code. Each config block looks like:
-# // Config 1:
+# // Config 1 - arduino:avr:uno
 # // Code that is commented-out
 # // More lines of commented-out code
 # // Config end
@@ -17,6 +17,8 @@
 # are present in the file. Then it will iterate through each config set,
 # make modifications to the file (remove leading spaces and "// " on lines in
 # the current config set's block(s) ), and then verify with Arduino.
+# Text after the hyphen is interpreted as arguments to Arduino's --board param:
+# https://github.com/arduino/Arduino/blob/ide-1.5.x/build/shared/manpage.adoc
 #
 # We read in the specified ino file, make modification, and write it back out.
 # This avoid issues with relative paths and stuff like that.
@@ -30,11 +32,12 @@ import re
 # Update this variable to point to your Arduino binary
 ARDUINO = "/home/matthew/bin/arduino"
 
-RE_CONFIG = "^// Config (\d+):$"
+RE_CONFIG = "^// Config (\d+) - (.*)$"
 
 def EnableConfigSet( original, ii ):
     InsideDesiredConfigBlock = False
     modified = []
+    board = ""
 
     for line in original:
         if InsideDesiredConfigBlock:
@@ -54,8 +57,9 @@ def EnableConfigSet( original, ii ):
                 if config_set == ii:
                     # This is the config set we want, enable it
                     InsideDesiredConfigBlock = True
+                    board = x.group(2)
 
-    return modified
+    return modified, board
 
 if len(sys.argv) < 2:
     print "Usage: %s /path/to/sketch.ino" % sys.argv[0]
@@ -82,12 +86,13 @@ try:
         x = "===== Processing config set %d " % ii
         x += "=" * (80 - len(x))
         print x
-        modified = EnableConfigSet( original, ii )
+        modified, board = EnableConfigSet( original, ii )
         with open(ino, "w") as fid:
             fid.write("".join(modified))
         #try:
-        # TODO what about uno vs mega2560
-        retcode = subprocess.call([ARDUINO, "--verify", "--board", "arduino:avr:uno", ino])
+        args = [ARDUINO, "--verify", "--board", board, ino]
+        print " ".join(args)
+        retcode = subprocess.call(args)
         if retcode != 0:
             print "Error while running Arduino, exiting"
             sys.exit(1)
