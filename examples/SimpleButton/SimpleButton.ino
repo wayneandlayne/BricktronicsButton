@@ -50,9 +50,16 @@
 // 3. With a Bricktronics Breakout board - No additional includes needed,
 // just update the pin number in the Button constructor below.
 //
-// The BricktronicsButton() argument is simply the pin the button is connected to,
-// that is, wherever pin 1 of the Breakout board is connected (also connect the ground pins).
-// No worries about PWM or interrupt pins for the button pin.
+// Connect these pins on the Bricktronics Breakout board:
+//  Pin 1 - Connect to Arduino input pin (any digital input pin)
+//  Pin 2 - Connect to Ground
+//  Pin 3 - Connect to Ground
+//  Pin 4 - Connect to 5V
+//  Pin 5 - No connection
+//  Pin 6 - No connection
+//
+// The BricktronicsButton() argument is simply the Arduino pin where the
+// button's pin 1 is connected. No worries about PWM or interrupt pins.
 //
 // Config 3 - arduino:avr:uno
 //BricktronicsButton b(7);
