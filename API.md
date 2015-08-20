@@ -64,7 +64,7 @@ void loop()
 
 Constructor - Simple constructor that accepts an input pin
 
-### Parameters
+**Parameters**
 
 * `uint8_t inputPin` - The Arduino pin number where the button's pin 1 is connected.
 
@@ -73,9 +73,9 @@ Constructor - Simple constructor that accepts an input pin
 
 Constructor - Advanced constructor that accepts a SensorSettings struct to also override the low-level Arduino functions.
 
-### Parameters
+**Parameters**
 
-* `const BricktronicsSensorSettings &settings` - A reference to the struct containing all the sensor settings. Get these structs from the [BricktronicsShield](https://github.com/wayneandlayne/BricktronicsShield) or [BricktronicsMegashield](https://github.com/wayneandlayne/BricktronicsMegashield) library.
+* `const BricktronicsSensorSettings &settings` - A const reference to the struct containing all the sensor settings. Get these structs from the [BricktronicsShield](https://github.com/wayneandlayne/BricktronicsShield) or [BricktronicsMegashield](https://github.com/wayneandlayne/BricktronicsMegashield) library.
 
 
 ## `void begin(void)`
