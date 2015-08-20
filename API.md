@@ -2,11 +2,11 @@
 
 This library interfaces with LEGO NXT and EV3 pushbutton sensors. It can be used with the [Bricktronics Shield](https://store.wayneandlayne.com/products/bricktronics-shield-kit.html), [Bricktronics Megashield](https://store.wayneandlayne.com/products/bricktronics-megashield-kit.html), or standalone with the [Bricktronics Breakout Board](https://store.wayneandlayne.com/products/bricktronics-breakout-board.html). For the shield/megashield, use the constructor below with the `BricktronicsSensorSettings` struct, otherwise use the constructor below that accepts the input pin number.
 
-## Connection with Bricktronics Shield and Megashield
+## Connection with [Bricktronics Shield](https://store.wayneandlayne.com/products/bricktronics-shield-kit.html) and [Bricktronics Megashield](https://store.wayneandlayne.com/products/bricktronics-megashield-kit.html)
 
 Use the pushbutton sensor with any sensor port on the Bricktronics Shield or Megashield. If the chosen sensor port has jumpers, connect pins 2-3 and 4-5.
 
-Constructor usage for [Bricktronics Shield](https://store.wayneandlayne.com/products/bricktronics-shield-kit.html)
+Constructor usage for Bricktronics Shield
 ```C++
 #include <Wire.h>
 #include <Adafruit_MCP23017.h>
@@ -14,7 +14,7 @@ Constructor usage for [Bricktronics Shield](https://store.wayneandlayne.com/prod
 BricktronicsButton b(BricktronicsShield::SENSOR_1);
 ```
 
-Constructor usage for [Bricktronics Megashield](https://store.wayneandlayne.com/products/bricktronics-megashield-kit.html)
+Constructor usage for Bricktronics Megashield
 ```C++
 #include <BricktronicsMegashield.h>
 BricktronicsButton b(BricktronicsMegashield::SENSOR_1);
