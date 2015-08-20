@@ -1,6 +1,6 @@
 # BricktronicsButton API
 
-This library interfaces with LEGO NXT and EV3 pushbutton sensors. It can be used with the [Bricktronics Shield](https://store.wayneandlayne.com/products/bricktronics-shield-kit.html), [Bricktronics Megashield](https://store.wayneandlayne.com/products/bricktronics-megashield-kit.html), or standalone with the [Bricktronics Breakout Board](https://store.wayneandlayne.com/products/bricktronics-breakout-board.html). For the shield/megashield, use the constructor below with the BricktronicsSensorSettings struct, otherwise use the constructor below that accepts the input pin number.
+This library interfaces with LEGO NXT and EV3 pushbutton sensors. It can be used with the [Bricktronics Shield](https://store.wayneandlayne.com/products/bricktronics-shield-kit.html), [Bricktronics Megashield](https://store.wayneandlayne.com/products/bricktronics-megashield-kit.html), or standalone with the [Bricktronics Breakout Board](https://store.wayneandlayne.com/products/bricktronics-breakout-board.html). For the shield/megashield, use the constructor below with the `BricktronicsSensorSettings` struct, otherwise use the constructor below that accepts the input pin number.
 
 ## Connection with Bricktronics Shield and Megashield
 
@@ -60,7 +60,7 @@ void loop()
 }
 ```
 
-## BricktronicsButton(uint8_t inputPin)
+## `BricktronicsButton(uint8_t inputPin)`
 
 Constructor - Simple constructor that accepts an input pin
 
@@ -69,7 +69,7 @@ Constructor - Simple constructor that accepts an input pin
 * `uint8_t inputPin` - The Arduino pin number where the button's pin 1 is connected.
 
 
-## BricktronicsButton(const BricktronicsSensorSettings &settings)
+## `BricktronicsButton(const BricktronicsSensorSettings &settings)`
 
 Constructor - Advanced constructor that accepts a SensorSettings struct to also override the low-level Arduino functions.
 
@@ -78,16 +78,16 @@ Constructor - Advanced constructor that accepts a SensorSettings struct to also 
 * `const BricktronicsSensorSettings &settings` - A reference to the struct containing all the sensor settings. Get these structs from the [BricktronicsShield](https://github.com/wayneandlayne/BricktronicsShield) or [BricktronicsMegashield](https://github.com/wayneandlayne/BricktronicsMegashield) library.
 
 
-## void begin(void)
+## `void begin(void)`
 
 Set up the sensor library internals and pin modes. Call this function once for each instance during your setup() function.
 
 
-## bool isPressed(void)
+## `bool isPressed(void)`
 
 Query the button to see if it is current pressed. Returns true if the button is pressed, false if released.
 
 
-## bool isReleased(void)
+## `bool isReleased(void)`
 
 Query the button to see if it is current released. Returns true if the button is released, false if pressed.
