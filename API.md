@@ -66,7 +66,7 @@ Constructor - Simple constructor that accepts an input pin
 
 ### Parameters
 
-* **uint8_t inputPin** - The Arduino pin number where the button's pin 1 is connected.
+* `uint8_t inputPin` - The Arduino pin number where the button's pin 1 is connected.
 
 
 ## BricktronicsButton(const BricktronicsSensorSettings &settings)
@@ -75,7 +75,7 @@ Constructor - Advanced constructor that accepts a SensorSettings struct to also 
 
 ### Parameters
 
-* **const BricktronicsSensorSettings &settings** - A reference to the struct containing all the sensor settings. Get these structs from the [BricktronicsShield](https://github.com/wayneandlayne/BricktronicsShield) or [BricktronicsMegashield](https://github.com/wayneandlayne/BricktronicsMegashield) library.
+* `const BricktronicsSensorSettings &settings` - A reference to the struct containing all the sensor settings. Get these structs from the [BricktronicsShield](https://github.com/wayneandlayne/BricktronicsShield) or [BricktronicsMegashield](https://github.com/wayneandlayne/BricktronicsMegashield) library.
 
 
 ## void begin(void)
@@ -85,19 +85,9 @@ Set up the sensor library internals and pin modes. Call this function once for e
 
 ## bool isPressed(void)
 
-Query the button to see if it is current pressed.
-
-### Return value
-
-* true - If the button is currently pressed
-* false - If the button is not currently pressed
+Query the button to see if it is current pressed. Returns true if the button is pressed, false if released.
 
 
 ## bool isReleased(void)
 
-Query the button to see if it is current released.
-
-### Return value
-
-* true - If the button is not currently pressed
-* false - If the button is currently pressed
+Query the button to see if it is current released. Returns true if the button is released, false if pressed.
