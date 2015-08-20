@@ -9,7 +9,7 @@ To download. click the "Download ZIP" button on the right side of this page. Ren
 
 Place the BricktronicsButton library folder into your `<arduinosketchfolder>/libraries/` folder. You may need to create the libraries subfolder if this is your first installed library. Restart the Arduino IDE.
 
-**API Highlights - [API Details](API.md)**
+**API Highlights - [API Details in API.md](API.md)**
 * `BricktronicsButton(uint8_t inputPin)` - Constructor
 * `void begin(void)` - Call the begin function in your setup() function
 * `bool isPressed(void)` - Returns true if the button is currently pressed
