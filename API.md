@@ -11,12 +11,14 @@ Constructor usage for Bricktronics Shield
 #include <Wire.h>
 #include <Adafruit_MCP23017.h>
 #include <BricktronicsShield.h>
+#include <BricktronicsButton.h>
 BricktronicsButton b(BricktronicsShield::SENSOR_1);
 ```
 
 Constructor usage for Bricktronics Megashield
 ```C++
 #include <BricktronicsMegashield.h>
+#include <BricktronicsButton.h>
 BricktronicsButton b(BricktronicsMegashield::SENSOR_1);
 ```
 
@@ -31,6 +33,7 @@ BricktronicsButton b(BricktronicsMegashield::SENSOR_1);
 
 Constructor usage for Bricktronics Breakout Board:
 ```C++
+#include <BricktronicsButton.h>
 BricktronicsButton b(7); // Arduino pin 7 is connected to breakout board pin 1.
 ```
 
