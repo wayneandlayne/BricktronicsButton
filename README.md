@@ -14,7 +14,7 @@ Place the BricktronicsButton library folder into your `<arduinosketchfolder>/lib
 * `void begin(void)` - Call the begin function in your setup() function
 * `bool isPressed(void)` - Returns true if the button is currently pressed
 * `bool isReleased(void)` - Returns true if the button is currently released
-* More API details in [API.md](API.md)...
+* More API details in [API.md](API.md)
 
 **If you want to use buttons with your Bricktronics Shield or Megashield, you may also be interested in these libraries:**
 * [BricktronicsShield Arduino Library v1.2](https://github.com/wayneandlayne/BricktronicsShield)
