@@ -52,6 +52,8 @@ BricktronicsButton b(7);
 void setup()
 {
     Serial.begin(115200);
+    // If using a Bricktronics Shield, you need to call
+    // BricktronicsShield::begin();
     b.begin();
 }
 
