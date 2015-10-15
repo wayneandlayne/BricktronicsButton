@@ -69,7 +69,7 @@ void loop()
 }
 ```
 
-# Constructors and begin()
+# Constructors and `begin()`
 
 #### `BricktronicsButton(uint8_t inputPin)`
 
