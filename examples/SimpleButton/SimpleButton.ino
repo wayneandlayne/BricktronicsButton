@@ -30,7 +30,7 @@
 // Select the sensor port (SENSOR_1 through SENSOR_4) in the constructors below.
 // If your chosen sensor port has jumpers (ports 3 and 4), connect pins 2-3 and 4-5.
 //
-// Config 1 - WNLCFGBS
+// Config 1 - CFG_WNL_BS
 //#include <Wire.h>
 //#include <Adafruit_MCP23017.h>
 //#include <BricktronicsShield.h>
@@ -42,7 +42,7 @@
 // Select the desired sensor port (SENSOR_1 through SENSOR_4) in the constructors below.
 // Connect pins 2-3 and 4-5 on the chosen sensor port.
 //
-// Config 2 - WNLCFGBMS
+// Config 2 - CFG_WNL_BMS
 //#include <BricktronicsMegashield.h>
 //BricktronicsButton b(BricktronicsMegashield::SENSOR_1);
 // Config end
@@ -61,7 +61,7 @@
 // The BricktronicsButton() argument is simply the Arduino pin where the
 // button's pin 1 is connected. No worries about PWM or interrupt pins.
 //
-// Config 3 - WNLCFGNS
+// Config 3 - CFG_WNL_NS
 //BricktronicsButton b(7);
 // Config end
 
@@ -73,7 +73,7 @@ void setup()
 
   // Only call this if you are using a Bricktronics Shield,
   // otherwise leave it commented-out.
-  // Config 1 - WNLCFGBS
+  // Config 1 - CFG_WNL_BS
   //BricktronicsShield::begin();
   // Config end
 
