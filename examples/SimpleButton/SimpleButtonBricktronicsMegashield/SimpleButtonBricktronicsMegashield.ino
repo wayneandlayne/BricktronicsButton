@@ -14,8 +14,6 @@
 //   https://github.com/wayneandlayne/BricktronicsButton
 // * Wayne and Layne BricktronicsMegashield library
 //   https://github.com/wayneandlayne/BricktronicsMegashield
-// * Adafruit MCP23017 library
-//   https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
 //
 // Written in 2016 by Matthew Beckler and Adam Wolf for Wayne and Layne, LLC
 // To the extent possible under law, the author(s) have dedicated all
@@ -26,8 +24,8 @@
 
 
 // Include the Bricktronics libraries
-#include <BricktronicsButton.h>
 #include <BricktronicsMegashield.h>
+#include <BricktronicsButton.h>
 
 
 // Select the desired sensor port (SENSOR_1 through SENSOR_4) in the constructor below.
