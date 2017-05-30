@@ -8,8 +8,6 @@ Use the pushbutton sensor with any sensor port on the Bricktronics Shield. If th
 
 Constructor usage for Bricktronics Shield
 ```C++
-#include <Wire.h>
-#include <Adafruit_MCP23017.h>
 #include <BricktronicsShield.h>
 #include <BricktronicsButton.h>
 BricktronicsButton b(BricktronicsShield::SENSOR_1);
